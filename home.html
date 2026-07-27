@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Stop - Parada do Banho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="preco.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logotipo2.png" alt="Pet Stop Logo" class="logo-img">
+                <span>PET STOP</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#servicos">SERVIÇOS</a></li>
+                    <li><a href="#localizacao">LOCALIZAÇÃO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+            <!-- Botão que abre o cadastro -->
+           <button class="btn-cadastro" onclick="abrirCadastro()" id="btnCadastro">CADASTRAR</button>
+           
+            
+
+<script>
+function abrirCadastro() {
+    fetch('http://127.0.0.1:5000/abrir-cadastro')
+        .then(response => {
+            if (response.ok) {
+                console.log("✅ Comando enviado pro servidor");
+            } else {
+                console.error("❌ Erro no servidor:", response.status);
+            }
+        })
+        .catch(err => console.error("❌ Erro ao abrir o cadastro:", err));
+}
+</script>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Parada</h1>
+                    <h1>Do</h1>
+                    <h1>Banho</h1>
+                    <p>O melhor momento do dia do seu pet!!</p>
+                    <a href="agendamento.html" class="btn-agende">AGENDE AGORA!</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/pet1.jpg" alt="Dois cachorrinhos fofos">
+                </div>
+            </div>
+        </section>
+
+        <section class="features-bar">
+            <div class="container">
+                <span>AQUI SEU MELHOR AMIGO É BEM VINDO</span>
+                <span>CARINHO</span>
+                <span>AMOR</span>
+                <span>ATENÇÃO</span>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2 class="section-title">SERVIÇOS</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <img src="img/hotelzinho.webp" alt="Cachorro no Hotelzinho">
+                        <h3>Hotelzinho</h3>
+                        <p>com pet espaço</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/namheira.webp" alt="Cachorro no Banho e Tosa">
+                        <h3></h3>
+                        <div class="servico-item" id="bloco-banho-tosa">
+    <img src=""> <h3>Banho e Tosa</h3>
+    <a href="#preco">valores clique aqui!</a>
+</div>
+
+<div id="modal-banho-tosa" class="modal-precos">
+    <div class="modal-conteudo">
+        <span class="fechar-modal" onclick="fecharModal()">&times;</span> 
+        
+        <h3>Valores e Serviços de Banho e Tosa</h3>
+        
+        <table class="tabela-servicos">
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Porte Pequeno</th>
+                    <th>Porte Médio</th>
+                    <th>Porte Grande</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Banho Simples</td>
+                    <td>R$ 40,00</td>
+                    <td>R$ 60,00</td>
+                    <td>R$ 85,00</td>
+                </tr>
+                <tr>
+                    <td>Banho + Tosa Higiênica</td>
+                    <td>R$ 60,00</td>
+                    <td>R$ 90,00</td>
+                    <td>R$ 120,00</td>
+                </tr>
+                <tr>
+                    <td>Banho + Tosa Completa</td>
+                    <td>R$ 80,00</td>
+                    <td>R$ 110,00</td>
+                    <td>R$ 150,00</td>
+                </tr>
+                <tr>
+                    <td>Hidratação Profissional</td>
+                    <td colspan="3">Adicional de R$ 30,00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="nota">*** Os valores podem variar conforme o estado da pelagem.</p>
+    </div>
+</div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="img/taxi.webp" alt="Táxi Dog">
+                        <h3>Táxi Dog</h3>
+                        <p>com hora marcada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="location">
+            <div class="container">
+                <h2 class="section-title">LOCALIZAÇÃO</h2>
+                <div class="location-content">
+                    <div class="location-image">
+                        <img src="img/uninove.webp" alt="Foto da Localização">
+                    </div>
+                    <div class="location-text">
+                        <img src="img/local.png" alt="Ícone de Localização" class="location-icon">
+                        <h3>UNIVERSIDADE UNINOVE</h3>
+                        <p><strong>Av. Prof. Luiz Inácio de Anhaia Mello 1359, São Paulo, SP, 03155-000</strong></p>
+                        <p>Um petshop bem localizado é facilmente acessível para os donos de animais de estimação, evitando que eles percorram longas distâncias para chegar lá. Isso aumenta a conveniência para os clientes, tornando-os mais propensos a visitar a loja.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <div class="container">
+                <h2 class="section-title">CONTATO</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Douglas</p>
+                        <p>douglas.olivera@uni9.edu.br</p>
+                        <p>(11) 98774-8745</p>
+                    </div>
+                    <div class="contact-hours">
+                        <h3>ATENDIMENTO COMERCIAL</h3>
+                        <p>Segunda a Sábado das 10:00 às 22:00</p>
+                        <p>Domingo das 14:00 às 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Função JS para abrir cadastro -->
+    <script>
+        document.getElementById("btnCadastro").addEventListener("click", function() {
+            fetch("http://127.0.0.1:5000/abrir-cadastro")
+            .then(response => console.log("Comando enviado para o servidor!"))
+            .catch(err => console.error("Erro ao abrir o cadastro:", err));
+        });
+
+        //preços
+// Obtém o elemento do modal
+const modal = document.getElementById('modal-banho-tosa');
+
+// Obtém o elemento que você quer que abra o modal (o bloco de serviço)
+const blocoBanhoTosa = document.getElementById('bloco-banho-tosa');
+
+// Função para abrir o modal
+blocoBanhoTosa.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Função para fechar o modal (usada pelo botão 'x')
+function fecharModal() {
+  modal.style.display = "none";
+}
+
+// Quando o usuário clicar fora do modal, ele fecha
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+<script src="script.js"></script>
+</body>
+
+</html>

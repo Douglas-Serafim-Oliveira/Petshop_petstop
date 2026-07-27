@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/agendamento.css">
+    <title>Agendamento Pet</title>
+</head>
+
+<body>
+
+    <main id="container">
+        <div id="cabeçalho">
+            <h1 id="Título">Agendamento</h1>
+        </div>
+
+        <form id="form-agendamento">
+
+            <div id="input_container">
+
+                <div class="input-box">
+                    <label for="nome">Nome</label>
+                    <div class="input-field">
+                        <input type="text" name="nome" id="nome" placeholder="Digite aqui..." required>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="telefone">Telefone</label>
+                    <div class="input-field">
+                        <input type="text" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>Serviço</label>
+                    <select name="servico" required>
+                        <option value="">Selecione o serviço</option>
+                        <option>Banho simples</option>
+                        <option>Banho + Tosa Higienica</option>
+                        <option>Banho + Tosa completa</option>
+                        <option>Hidratação Profissional</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>Animal</label>
+                    <select name="animal" required>
+                        <option value="">Selecione</option>
+                        <option>Cachorro Pequeno</option>
+                        <option>Cachorro Médio</option>
+                        <option>Cachorro Grande</option>
+                        <option>Gato</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label for="data">Data</label>
+                    <div class="input-field">
+                        <input type="date" name="data_agendamento" id="data" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="hora">Horário</label>
+                    <div class="input-field">
+                        <input type="time" name="horario_agendamento" id="hora" required>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-default">
+                <i class="fa-solid fa-check"></i>
+                Agendar
+            </button>
+
+        </form>
+
+        <!-- Modal -->
+        <div id="modal-confirmacao" class="modal">
+            <div class="modal-content">
+                <div id="modal-mensagem-texto"></div>
+                <a href="home.html" class="btn-default">Concluir</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="petstop.js"></script>
+</body>
+
+</html>
